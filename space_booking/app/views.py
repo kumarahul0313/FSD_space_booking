@@ -12,5 +12,8 @@ class MeetingRoomViewSet(viewsets.ModelViewSet):
     serializer_class = MeetingRoomSerializer
     
     
+    
+    
+    
 
 
