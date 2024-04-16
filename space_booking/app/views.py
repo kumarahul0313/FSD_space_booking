@@ -11,9 +11,5 @@ class MeetingRoomViewSet(viewsets.ModelViewSet):
     queryset = MeetingRoom.objects.all()
     serializer_class = MeetingRoomSerializer
     
-    
-    
-    
-    
 
 
