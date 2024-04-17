@@ -30,7 +30,7 @@ class AdditionalServices(models.Model):
     
 class Booking(models.Model):
     booking_id = models.AutoField(primary_key=True)
-    employee = models.ForeignKey(Employee, on_delete=models.CASCADE)
+    employee = models.ForeignKey(Employee, on_delete=models.CASCADE, related_name="employee")
     meeting_room = models.ForeignKey(MeetingRoom, on_delete=models.PROTECT)
     date = models.DateField()
     start_time = models.TimeField()
@@ -42,8 +42,8 @@ class Booking(models.Model):
     approval_required = models.BooleanField(default=False)
     booking_status = models.CharField(max_length=20, default='approved')
     approval_status = models.CharField(max_length=20, default='pending')
-    pending_with = models.ForeignKey(Employee, on_delete=models.SET_NULL, null=True)
-    approved_by = models.ForeignKey(Employee, on_delete=models.SET_NULL, null=True)
+    pending_with = models.ForeignKey(Employee, on_delete=models.SET_NULL, null=True, related_name="pending_with")
+    approved_by = models.ForeignKey(Employee, on_delete=models.SET_NULL, null=True, related_name="approved_by")
     
     
     
