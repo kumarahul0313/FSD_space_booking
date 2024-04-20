@@ -18,3 +18,8 @@ class AdditionalServicesSerializer(serializers.ModelSerializer):
     class Meta:
         model = AdditionalServices
         fields = "__all__"
+        
+class BookingSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Booking
+        fields = "__all__"
