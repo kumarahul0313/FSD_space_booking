@@ -12,7 +12,7 @@ router.register(r'addt_services', views.AdditionalServicesViewSet, 'addt_service
 
 
 urlpatterns = [
-    url(r'^space_booking/', include(router.urls)),   
-    
+    url(r'^space_booking/', include(router.urls)),
+    url(r'^user/booking/', include(router.urls)),   
     
 ]
